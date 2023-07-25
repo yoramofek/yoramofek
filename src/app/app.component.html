@@ -1,0 +1,99 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      App Name
+    </h6>
+  </igx-navbar-title>
+  <button igxButton="icon" igxRipple>
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxButton="icon" igxRipple>
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxButton="icon" igxRipple>
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [pinThreshold]="0" width="320px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple routerLink="/view1">
+        <igx-icon class="icon">
+          book
+        </igx-icon>
+        <span>View 1</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view2">
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+        <span>View 2</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view3">
+        <igx-icon class="icon">
+          assignment_turned_in
+        </igx-icon>
+        <span>View 3</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+  <button igxButton="raised" igxRipple class="button">
+    Button
+  </button>
+  <button igxButton="raised" igxRipple class="button">
+    Button
+  </button>
+  <button igxButton="raised" igxRipple class="button">
+    Button
+  </button>
+  <igx-card type="outlined" class="card">
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>
+        Title goes here...
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        Subtitle goes here...
+      </h5>
+    </igx-card-header>
+    <igx-card-actions class="actions-content">
+      <ng-container igxStart>
+        <button igxButton="flat" igxRipple class="button_1">
+          Button
+        </button>
+      </ng-container>
+      <ng-container igxEnd>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </ng-container>
+    </igx-card-actions>
+  </igx-card>
+</div>
